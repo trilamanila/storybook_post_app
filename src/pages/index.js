@@ -2,6 +2,7 @@ import Head from "next/head";
 import Post from "../components/Post";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
+import Bio from "../components/Bio";
 
 export default function Home() {
   return (

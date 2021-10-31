@@ -1,29 +1,3 @@
-name: test
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
-  test:
-
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.x, 14.x, 16.x]
-       
-    steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: yarn install
-    - run: npx eyes-storybook
-    - run: npm test
-      env:
-          APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d9ce976420a74b9c2ea2cc51c2e83055585c0220c1f6ac475a9833540c51d1c8
+size 562
